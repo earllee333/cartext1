@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Footer from '../component/Footer'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -9,8 +10,8 @@ export default function Home() {
         <title>Cars|Home</title>
         <meta name="viewport" contentcontent="width=device-width"/>
       </Head>
-    <h1>hi</h1>
-     
+    <h1>from index</h1>
+    <Footer/>
     </div>
   )
 }
