@@ -18,7 +18,6 @@ const Contact = () => {
                 color:gray;
                 list-style-type: none;;
                 font-weight:600;
-            
                 
             }
             }`}

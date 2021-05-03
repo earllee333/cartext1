@@ -20,7 +20,6 @@ export async function getStaticProps(){
 
 
 
-
 const Recipes = ({datas}) => {
     console.log(datas)
     return ( 
