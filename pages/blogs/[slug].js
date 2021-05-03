@@ -43,10 +43,9 @@ const CarsDetail = ({datas}) => {
                 <div className="title"><h2>{titles}</h2></div>
                 <div>{documentToReactComponents(description)}</div>
                 <div className="detail-pho">{photo.map(item=>(
-                    <div className="each-pho">
                     <Image key={item.sys.id} src = {'https:'+item.fields.file.url}
                     width={450} height={300} />
-                    </div>
+                    
                 ))}</div>
                 <div className="price">
                     {price && <p>TWD {price}</p>}
@@ -89,3 +88,5 @@ const CarsDetail = ({datas}) => {
 }
  
 export default CarsDetail;
+
+
