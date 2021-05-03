@@ -28,7 +28,6 @@ const Recipes = ({datas}) => {
             {datas.map(data=>(//must '()' not '{}'
                 <RecipesCard key={data.sys.id} data={data} />
             ))}
-            <Footer/>
             <style jsx>{
             `.recipe-list{
                 display:grid;

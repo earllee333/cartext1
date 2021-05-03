@@ -12,7 +12,6 @@ export default function Home() {
         <meta name="viewport" contentcontent="width=device-width"/>
       </Head>
     <h1>from index</h1>
-    <Footer/>
     </div>
   )
 }
