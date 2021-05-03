@@ -51,7 +51,7 @@ export default function RecipeDetails({recipe}){
                 <h2>{title}</h2>
             </div>
             <div className="info">
-                <p>Take About: <div className="cookingTime">{cookingTime}</div></p>
+                <div className="cookingTime">Take About:{cookingTime}</div>
                 <h3>Ingredients:</h3>
                 {ingredients.map(ing=> (
                     <span key={ing}>{ing}</span>
