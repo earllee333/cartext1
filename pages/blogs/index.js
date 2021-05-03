@@ -15,8 +15,8 @@ export async function getStaticProps(){
 }
 
 const List = ({datas}) => {
-    console.log(datas)
-    console.log(datas.sys)
+    console.log()
+    
     return ( 
         <div className="list-menu">
         {datas.map(data=>(
