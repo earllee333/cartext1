@@ -12,9 +12,10 @@ const CarsMenu = ({data}) => {
             <title>Cars Menu</title>
         </Head>
         <div className='carsmenu'>
+            
             <div className="profile-pho">
               <Image src={'https:'+profilePicture.fields.file.url} 
-              width={400} height={300} />
+              width={450} height={300} />
             </div>
             <div className="content">
                 <ul>
@@ -37,13 +38,16 @@ const CarsMenu = ({data}) => {
         <style jsx>
             {`{
             .carsmenu {text-align:center;
-            border:1px solid;
-            padding:10px;
+            border-top:3px solid;
+            padding:0px;
+            margin:0px;
+            width:100%;
             padding-top:50px}
             ul{list-style-type:none;text-align:center}
-            li{display:inline-block;padding-left:15px}
-            #price{color:rgb(235, 60, 60)}
+            li{display:inline-block;}
+            #price{color:rgb(235, 60, 60);padding-left:10px;}
             a{color:red;padding-left:5px}
+            .profile-pho image{width:100%}
             }`}
         </style>
         </div>

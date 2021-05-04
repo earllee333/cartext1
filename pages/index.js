@@ -8,8 +8,9 @@ export default function Home() {
   return (
     <div className={styles.home}>
       <Head>
-        <title>Cars|Home</title>
+        <title>Don'sCar|Home</title>
         <meta name="viewport" contentcontent="width=device-width initial-scale=1, user-scalable=1"/>
+        <link rel="icon" href="/soup.ico" />
       </Head>
     <div className='Aim'>
       <p>Offer perfessional servers with <strong>Patience</strong>

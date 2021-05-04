@@ -58,7 +58,7 @@ const CarsDetail = ({datas}) => {
             <style jsx>
                 {`{
                 .details{
-                    text-align:center
+                    text-align:center;
                     
                 }
                 .details .title{
@@ -67,12 +67,13 @@ const CarsDetail = ({datas}) => {
                     margin:10px;
                 }
                 .each-pho{
-                    border:1px solid;
-                    padding:10px
+                    border-bottom:3px solid;
+                    padding:10px;
+                    margin:30px;
+                    
                 }
                 .price{
-                float:right;
-                padding-right:30px;
+                
                 padding-top:20px;
                 text-decoration:none;
                 font-weight:500;
@@ -80,7 +81,7 @@ const CarsDetail = ({datas}) => {
                 color:gray
                 }
                 .time{float:left;}
-                p{color:gray}
+                p{color:gray;}
                 #TWD{color:rgb(235, 60, 60)}
                 }`}
             </style>

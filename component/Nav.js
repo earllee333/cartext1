@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <div className="container">
       <nav>
-          <h1>東翔汽車</h1>
+          <h1>Kaohsiung</h1>
           <ul>
               <li><Link href="/" >Home</Link></li>
               <li><Link href="/about" >About</Link></li>
               <li><Link href="/contact" >Contact us</Link></li>
-              <li><Link href="/blogs" >Blogs</Link></li>
+              <li><Link href="/blogs" >Cars</Link></li>
 
               {user&&<li><Link href="/recipes" >recipe</Link></li>}
               {!user &&<li className="btn" onClick={login} >Login</li>}
