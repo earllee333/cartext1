@@ -17,7 +17,9 @@ const About = () => {
                 text-indent: 10px;
             letter-spacing:3px
             margin-left: auto;margin-right:auto;
-        max-width:700px;}
+                max-width:1024px
+            ;
+    text-align:center}
 
             }`}
         </style>

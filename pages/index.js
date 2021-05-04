@@ -9,10 +9,10 @@ export default function Home() {
     <div className={styles.home}>
       <Head>
         <title>Cars|Home</title>
-        <meta name="viewport" contentcontent="width=device-width"/>
+        <meta name="viewport" contentcontent="width=device-width initial-scale=1, user-scalable=1"/>
       </Head>
     <div className='Aim'>
-      <p>Offer perfessional servers with <strong>Dream</strong>
+      <p>Offer perfessional servers with <strong>Patience</strong>
 </p>
     </div>
     <style jsx>
