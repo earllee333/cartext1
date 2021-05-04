@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className="container">
       <nav>
-          <h1>Kao-shun Cars</h1>
+          <h1>東翔汽車</h1>
           <ul>
               <li><Link href="/" >Home</Link></li>
               <li><Link href="/about" >About</Link></li>
@@ -15,7 +15,7 @@ export default function Navbar() {
               <li><Link href="/blogs" >Blogs</Link></li>
 
               {user&&<li><Link href="/recipes" >recipe</Link></li>}
-              {!user &&<li className="btn" onClick={login} >Sign/Login</li>}
+              {!user &&<li className="btn" onClick={login} >Login</li>}
               {user&& <li className="btn" onClick={logout} >Louout</li>}
           </ul>
       </nav>

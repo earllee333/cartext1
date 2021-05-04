@@ -33,7 +33,7 @@ export async function getStaticProps({params}){
 }
 const CarsDetail = ({datas}) => {
     console.log(datas)
-    const {number,price,description,photo,tag,titles,time,slug} = datas.fields
+    const {number,description,photo,tag,titles,time,slug} = datas.fields
     return ( 
         <>
             <Head>
@@ -49,7 +49,7 @@ const CarsDetail = ({datas}) => {
                     </div>
                 ))}</div>
                 <div className="price">
-                    {number && <p>TWD {number}</p>}
+                    {number && <p id='TWD'>TWD {number}</p>}
                     {!number && <Link href ='/contact' >Contact US!!</Link>}
                 </div>
                 
@@ -74,13 +74,14 @@ const CarsDetail = ({datas}) => {
                 float:right;
                 padding-right:30px;
                 padding-top:20px;
-                text-decoration:underline;
+                text-decoration:none;
                 font-weight:500;
                 font-size:20px;
                 color:gray
                 }
                 .time{float:left;}
                 p{color:gray}
+                #TWD{color:rgb(235, 60, 60)}
                 }`}
             </style>
             </div>
