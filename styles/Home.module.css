@@ -1,5 +1,7 @@
 .home{
-  max-width:760px;
-  line-height: 1.6em;
-  letter-spacing: 1px;
+  text-align: center;
+  margin-left:auto;
+  margin-right:auto;
+  padding:10px;
+  
 }
