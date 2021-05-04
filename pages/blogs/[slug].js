@@ -3,6 +3,8 @@ import Image from 'next/image'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import Head from 'next/head'
 import Link from 'next/link'
+import Video from 'next-videos'
+import {ReactVideo} from 'reactjs-media'
 const client =createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
@@ -33,7 +35,7 @@ export async function getStaticProps({params}){
 }
 const CarsDetail = ({datas}) => {
     console.log(datas)
-    const {number,description,photo,tag,titles,time,slug} = datas.fields
+    const {number,description,photo,tag,titles,time,slug,media} = datas.fields
     return ( 
         <>
             <Head>
@@ -48,6 +50,13 @@ const CarsDetail = ({datas}) => {
                     width={450} height={300} />
                     </div>
                 ))}</div>
+                {media &&
+                <div className="video">{media.map(item=>(
+                <ReactVideo src={'https:'+item.fields.file.url} primaryColor="red" poster="/soup.ico"/>
+
+                ))}
+
+                </div>}
                 <div className="price">
                     {number && <p id='TWD'>TWD {number}</p>}
                     {!number && <Link href ='/contact' >Contact US!!</Link>}
