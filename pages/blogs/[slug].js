@@ -2,7 +2,7 @@ import{createClient} from 'contentful'
 import Image from 'next/image'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import Head from 'next/head'
-
+import Link from 'next/link'
 const client =createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
@@ -33,7 +33,7 @@ export async function getStaticProps({params}){
 }
 const CarsDetail = ({datas}) => {
     console.log(datas)
-    const {price,description,photo,tag,titles,time,slug} = datas.fields
+    const {number,price,description,photo,tag,titles,time,slug} = datas.fields
     return ( 
         <>
             <Head>
@@ -49,8 +49,8 @@ const CarsDetail = ({datas}) => {
                     </div>
                 ))}</div>
                 <div className="price">
-                    {price && <p>TWD {price}</p>}
-                    {!price && <p>Contact US!!!</p>}
+                    {number && <p>TWD {number}</p>}
+                    {!number && <Link href ='/contact' >Contact US!!</Link>}
                 </div>
                 
                 <p>{tag.map(tag=>('#'+tag ) )+''}</p>

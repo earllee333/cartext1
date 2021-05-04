@@ -28,9 +28,8 @@ nav ul {
   padding: 0;
 }
 .footer{
- margin-bottom: auto;
+ padding-top: 100px;
  text-align:center;
- padding:160px;
  font-weight:800;
  font-size:5px;
  color:rgb(245, 231, 231);
@@ -51,7 +50,7 @@ nav li.btn:hover {
 .carspho{display:block}
 .carsmenu .action a{
   color:steelblue;
-  margin-left:300px;
+  margin-left:250px;
   font-weight:500;
   font-size :20px;
   padding:30px

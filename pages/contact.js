@@ -12,8 +12,8 @@ const Contact = () => {
         <style jsx>
             {`{
             li{
-                padding-left:50px;
-                margin:20px;
+                text-align:center;
+                margin:10px;
                 font-size:20px;
                 color:gray;
                 list-style-type: none;;

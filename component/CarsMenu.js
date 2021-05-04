@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const CarsMenu = ({data}) => {
 
-    const {titles,time,stock,slug,price,media,photo,profilePicture,tag} = data.fields
+    const {number,titles,time,stock,slug,price,media,photo,profilePicture,tag} = data.fields
     console.log(data)
     return ( 
        <>
@@ -17,7 +17,7 @@ const CarsMenu = ({data}) => {
               width={400} height={300} />
             </div>
             <div className="content">
-                <p>{titles} {price}</p>
+                <p>{titles} {number}</p>
                 <p>{tag.map(tag=>('#'+tag ) )+''}</p>
                 {stock && <p>{stock}</p>}
                 {time}
