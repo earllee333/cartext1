@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import ReactPlayer from 'react-player'
 import {ReactAudio} from 'reactjs-media/audio'
+import Skeleton from '../../component/Skeleton'
 const client =createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
@@ -35,7 +36,7 @@ export async function getStaticProps({params}){
 }
 const CarsDetail = ({datas}) => {
     console.log(datas)
-    if(datas) return<div>isLoading</div>
+    if(!datas) return <Skeleton />
     const {number,description,photo,tag,titles,time,slug,media} = datas.fields
     return ( 
         <>
