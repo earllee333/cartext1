@@ -12,12 +12,14 @@ export default function Home() {
         <link rel="icon" href="/soup.ico" />
       </Head>
     <div className='Aim'>
-      <p>For great</p>
-      <p><strong>Be Brilliant.</strong></p>
+      <p>如果喜歡一個女生 就和她告白</p>
+      <p>我用這個方法從未失敗過</p>
+      <p id="chris">Chris Evens</p>
     </div>
     <style jsx>
       {`{
-        .Aim{padding-top:60px}
+        .Aim{padding-top:60px;margin:0 auto};
+        
       }`}
     </style>
     </div>

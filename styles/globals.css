@@ -11,6 +11,7 @@ body {
   /* color:rgb(49, 161, 206) */
 @import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 .container {
   max-width: 800px;
   margin:auto;
@@ -89,3 +90,7 @@ nav li.btn:hover {
 .video{
 
  }
+ #chris{font-family: 'Great Vibes', cursive;
+color:gray;
+font-size: 12px;
+padding-left:140px}
