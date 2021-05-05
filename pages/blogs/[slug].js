@@ -21,7 +21,7 @@ export const getStaticPaths = async() => {
     })
     return{
         paths:paths,
-        fallback:false
+        fallback:true
     }
 }
 export async function getStaticProps({params}){
@@ -35,6 +35,7 @@ export async function getStaticProps({params}){
 }
 const CarsDetail = ({datas}) => {
     console.log(datas)
+    if(datas) return<div>isLoading</div>
     const {number,description,photo,tag,titles,time,slug,media} = datas.fields
     return ( 
         <>
