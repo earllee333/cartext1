@@ -12,12 +12,12 @@ export default function Home() {
         <link rel="icon" href="/soup.ico" />
       </Head>
     <div className='Aim'>
-      <p>Offer perfessional servers with <strong>Patience</strong>
-</p>
+      <p>For great</p>
+      <p><strong>Be Brilliant.</strong></p>
     </div>
     <style jsx>
       {`{
-        
+        .Aim{padding-top:60px}
       }`}
     </style>
     </div>

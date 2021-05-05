@@ -43,7 +43,7 @@ const CarsDetail = ({datas}) => {
             </Head>
             <div className="details">
                 <div className="title"><h2>{titles}</h2></div>
-                <div>{documentToReactComponents(description)}</div>
+                <div className="paragraph"><p>{documentToReactComponents(description)}</p></div>
                 <div className="detail-pho">{photo.map(item=>(
                     <div className="each-pho">
                     <Image key={item.sys.id} src = {'https:'+item.fields.file.url}
@@ -85,6 +85,14 @@ const CarsDetail = ({datas}) => {
                     margin 0 auto;
                     width:380px
                    }
+                
+                   .paragraph p{padding:10px;margin:0px;line-height:1.6;
+                    text-indent: 10px;
+                    letter-spacing:3px;
+                    margin-left: auto;margin-right:auto;
+                    max-width:1024px;
+                    text-align:center;
+                    color:black}
                 .price{
                 
                 padding-top:20px;

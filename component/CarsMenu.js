@@ -38,7 +38,7 @@ const CarsMenu = ({data}) => {
         <style jsx>
             {`{
             .carsmenu {text-align:center;
-            border-top:3px solid;
+            border-top:0.5px solid gray;;
             padding:0px;
             margin:0px;
             width:100%;
