@@ -16,7 +16,7 @@ export async function getStaticProps(){
 
 const List = ({datas}) => {
     console.log()
-    
+    if(!datas) return <div>Loading</div>
     return ( 
         <div className="list-menu">
         {datas.map(data=>(
