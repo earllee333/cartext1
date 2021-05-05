@@ -31,7 +31,8 @@ export async function getStaticProps({params}){
         'fields.slug':params.slug
     })
     return{
-        props:{datas:items[0]}
+        props:{datas:items[0]},
+        revalidate:1
     }
 }
 export default function CarsDetail({datas}){
