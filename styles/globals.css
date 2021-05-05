@@ -27,7 +27,7 @@ nav {
   display: inline;
   margin-left: 0px;
   list-style-type: none;
-  margin:0 auto;
+  margin:0 auto;/*RWD*/
 
 }
 nav li a{ text-decoration: none;
@@ -80,7 +80,7 @@ ul.drop-down-menu ul {
   z-index: 99;
   left: 0px;
   top: 100%;
- min-width: 148px;
+ min-width: 142px;
  list-style-type: none;
 }
 
