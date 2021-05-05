@@ -3,8 +3,8 @@ import Image from 'next/image'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
 import Head from 'next/head'
 import Link from 'next/link'
-import Video from 'next-videos'
-import {ReactVideo} from 'reactjs-media'
+import ReactPlayer from 'react-player'
+import {ReactAudio} from 'reactjs-media/audio'
 const client =createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
@@ -52,7 +52,7 @@ const CarsDetail = ({datas}) => {
                 ))}</div>
                 {media &&
                 <div className="video">{media.map(item=>(
-                <ReactVideo src={'https:'+item.fields.file.url} primaryColor="red" poster="/soup.ico"/>
+                <ReactPlayer url={'https:'+item.fields.file.url}  controls/>
 
                 ))}
 
