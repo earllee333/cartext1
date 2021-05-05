@@ -23,9 +23,10 @@ nav {
   align-items: center;
 
 }
-nav li {
-  display: inline-block;
-  margin-left: 16px;
+.drop-down-menu {
+  display: inline;
+  margin-left: 0px;
+  list-style-type: none;
 
 }
 nav li a{ text-decoration: none;
@@ -38,11 +39,68 @@ nav h1{
   
 
 }
-nav ul {
-  margin-left: 24px;
-  list-style-type: none;
-  padding-left: 0px;
+
+
+.drop-down-menu li {
+  position: relative;
+  white-space: nowrap;
+  border-right: #ccc 1px solid;
+  margin:1px;
+  left:0px;
 }
+
+
+
+
+.drop-down-menu > li {
+  display: inline-block;/*login padding*/
+  }
+
+ul.drop-down-menu a {
+  background-color: #fff;
+  color: #333;
+  display: block;
+  padding: 0 10px;
+  text-decoration: none;
+  line-height: 30px;
+  color:rgb(23, 102, 94);
+}
+ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
+  background-color: #ef5c28;
+  color: #fff;
+}
+ul.drop-down-menu li:hover > a { /* 滑鼠移入次選單上層按鈕保持變色*/
+  background-color: #ef5c28;
+  color: #fff;
+}
+ul.drop-down-menu ul {
+  border: #ccc 1px solid;
+  position: absolute;
+  z-index: 99;
+  left: 10px;
+  top: 100%;
+ min-width: 180px;
+ list-style-type: none;
+}
+
+ul.drop-down-menu ul li {
+  border-bottom: #ccc 1px solid;
+}
+
+
+.drop-down-menu ul { /*隱藏次選單*/
+  display: none;
+
+}
+
+.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+  display: block;
+
+}
+
+
+
+
 .footer{
  padding-top: 100px;
  text-align:center;
