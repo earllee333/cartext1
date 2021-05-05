@@ -115,4 +115,3 @@ const CarsDetail = ({datas}) => {
  
 export default CarsDetail;
 
-

@@ -23,9 +23,9 @@ const CarsMenu = ({data}) => {
                     <li id='price'><strong>{number}</strong></li>
                 </ul>
                 
-                <p>{tag.map(tag=>('#'+tag ) )+''}</p>
+                <p id='tag'>{tag.map(tag=>('#'+tag ) )+''}</p>
                 {stock && <p>{stock}</p>}
-                {time}
+                <a id="time">{time}</a>
                 {stock && <a> On Sale</a>}
                 {!stock&&<a>Temporarily sold</a>}
             </div>
@@ -46,8 +46,11 @@ const CarsMenu = ({data}) => {
             ul{list-style-type:none;text-align:center}
             li{display:inline-block;}
             #price{color:rgb(235, 60, 60);padding-left:10px;}
-            a{color:red;padding-left:5px}
+            a{color:red;padding-left:5px;font-weight:800;}
             .profile-pho image{width:100%}
+            li {font-weight:bold;font-size:20px;}
+            #tag{color:gray;font-size:12px}
+            #time{color:gray;font-size:12px;font-weight:500;}
             }`}
         </style>
         </div>

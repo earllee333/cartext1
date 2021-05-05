@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <div className="container">
       <nav>
-          <h1>Kaohsiung</h1>
+        <h1><Link href='/'>Kaohsiung</Link></h1>
           <ul className="drop-down-menu">
               <li><a>Functions</a>
               <ul>
@@ -24,10 +24,10 @@ export default function Navbar() {
           </ul>
       </nav>
       <style jsx>
-        {`{
-          .drop-down-menu ul{color:red}
-        }`}
+        {`{}`}
       </style>
+
+  
     </div>
   )
 }
