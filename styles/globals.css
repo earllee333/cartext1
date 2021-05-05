@@ -77,9 +77,9 @@ ul.drop-down-menu ul {
   border: #ccc 1px solid;
   position: absolute;
   z-index: 99;
-  left: 10px;
+  left: 0px;
   top: 100%;
- min-width: 180px;
+ min-width: 148px;
  list-style-type: none;
 }
 
