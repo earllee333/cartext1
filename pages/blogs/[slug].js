@@ -52,7 +52,7 @@ const CarsDetail = ({datas}) => {
                 ))}</div>
                 {media &&
                 <div className="video">{media.map(item=>(
-                <ReactPlayer url={'https:'+item.fields.file.url}  controls/>
+                <ReactPlayer url={'https:'+item.fields.file.url}  width={380} height={300} controls />
 
                 ))}
 
@@ -81,6 +81,10 @@ const CarsDetail = ({datas}) => {
                     margin:30px;
                     
                 }
+                .video{
+                    margin 0 auto;
+                    width:380px
+                   }
                 .price{
                 
                 padding-top:20px;
