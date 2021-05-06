@@ -43,11 +43,10 @@ const CarsMenu = ({data,index,datas}) => {
         <style jsx>
             {`{
             .carsmenu {text-align:center;
-            border-top:0.5px solid gray;;
             padding:0px;
             margin:0px;
             width:100%;
-            padding-top:50px}
+            }
             ul{list-style-type:none;text-align:center}
             li{display:inline-block;}
             #price{color:rgb(235, 60, 60);padding-left:10px;}
@@ -58,8 +57,8 @@ const CarsMenu = ({data,index,datas}) => {
             #time{color:gray;font-size:12px;font-weight:500;}
             .mark{
                 position:relative;
-                right:185px;
-                bottom:80px
+                right:160px;
+                bottom:90px
                 
               }
             }`}
