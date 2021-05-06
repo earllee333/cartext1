@@ -10,6 +10,8 @@ export default function Home() {
       <Head>
         <title>Don'sCar|Home</title>
         <link rel="icon" href="/soup.ico" />
+        <link rel="preload" as="image" href='/blog'>
+            </link>
       </Head>
     <div className='Aim'>
       <p>如果喜歡一個女生 就和她告白</p>
