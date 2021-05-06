@@ -10,9 +10,6 @@ const CarsMenu = ({data,index,datas}) => {
        <>
         <Head>
             <title>Cars Menu</title>
-            <link rel="preload" as="image" href={'https:'+profilePicture.fields.file.url}>
-
-            </link>
         </Head>
         <div className='carsmenu'>
             
