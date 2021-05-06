@@ -38,7 +38,6 @@ export async function getStaticProps({params}){
     }
 }
 export default function CarsDetail({datas}){
-    if(!datas) return <div>Loading</div>
     const {number,description,photo,tag,titles,time,slug,media} = datas.fields
     return ( 
         <>
