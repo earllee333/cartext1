@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const CarsMenu = ({data,index,datas}) => {
 
-    const {number,titles,time,stock,slug,media,photo,profilePicture,tag} = data.fields
+    const {mark,number,titles,time,stock,slug,media,photo,profilePicture,tag} = data.fields
     console.log(data)
     return ( 
        <>
@@ -17,9 +17,11 @@ const CarsMenu = ({data,index,datas}) => {
         <div className='carsmenu'>
             
             <div className="profile-pho">
-              <Image src={'https:'+profilePicture.fields.file.url} 
+              <Link href={'blogs/'+slug}>
+                     <Image href={'/blogs/'+slug} src={'https:'+profilePicture.fields.file.url} 
               width={450} height={300} 
               loading={datas.length === index+1 ?'eager':'lazy'}/>
+              </Link>
             </div>
             <div className="content">
                 <ul>
@@ -33,11 +35,10 @@ const CarsMenu = ({data,index,datas}) => {
                 {stock && <a> On Sale</a>}
                 {!stock&&<a>Temporarily sold</a>}
             </div>
-            <div className='action'>
-                <Link href={'/blogs/'+slug}>
-                    <a>Detail</a>
-                </Link>
-            </div>
+            {mark&&
+            <div className="mark">
+                <Image src='/bmw-ico.jpg' width={36} height={36} ></Image>
+            </div>}
 
         <style jsx>
             {`{
@@ -55,6 +56,12 @@ const CarsMenu = ({data,index,datas}) => {
             li {font-weight:bold;font-size:20px;}
             #tag{color:gray;font-size:12px}
             #time{color:gray;font-size:12px;font-weight:500;}
+            .mark{
+                position:relative;
+                right:185px;
+                bottom:80px
+                
+              }
             }`}
         </style>
         </div>
