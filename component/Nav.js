@@ -14,7 +14,7 @@ export default function Navbar() {
               <li><Link href="/" >Home</Link></li>
                 <li><Link href="/about" >About</Link></li>
                 <li><Link href="/contact" >Contact us</Link></li>
-                <li><Link href="/blogs" >Cars</Link></li>
+                <li><Link prefetch href="/blogs" >Cars</Link></li>
                 <li>
                   {user&&<li><Link href="/recipes" >recipe</Link></li>}
                   {!user &&<li className="btn" onClick={login} >Login</li>}

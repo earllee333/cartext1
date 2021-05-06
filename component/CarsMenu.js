@@ -17,7 +17,7 @@ const CarsMenu = ({data,index,datas}) => {
         <div className='carsmenu'>
             
             <div className="profile-pho">
-              <Link href={'blogs/'+slug}>
+              <Link prefetch href={'blogs/'+slug}>
                      <Image href={'/blogs/'+slug} src={'https:'+profilePicture.fields.file.url} 
               width={450} height={300} 
               loading={datas.length === index+1 ?'eager':'lazy'}/>
