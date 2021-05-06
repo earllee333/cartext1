@@ -40,7 +40,10 @@ nav h1{
   font-family: 'Coda Caption', sans-serif;
 }
 nav h1 a{color:black;text-decoration:none;}
+nav ul li{
+  margin-right:auto; 
 
+}
 
 .drop-down-menu li {
   position: relative;
@@ -58,13 +61,14 @@ nav h1 a{color:black;text-decoration:none;}
   }
 
 ul.drop-down-menu a {
-  background-color: #fff;
+  background-color: white;
   color: #333;
   display: block;
-  padding: 0 10px;
+  padding: 0px 20px;
   text-decoration: none;
   line-height: 30px;
   color:rgb(23, 102, 94);
+  
 }
 ul.drop-down-menu a:hover { /* 滑鼠滑入按鈕變色*/
   background-color: #ef5c28;
@@ -122,6 +126,8 @@ h1{
 nav li.btn{
   background: white;
   padding: 3px;
+  border-top: 0.1px solid gray;
+  margin:-1.5px;
   font-weight: 600;
   font-size:16px;
   color:rgb(23, 102, 94);
@@ -130,7 +136,7 @@ nav li.btn{
 }
 nav li.btn:hover {
   color:rgb(49, 161, 206);
-  background-color:white;
+  background-color: white;
 }
 .carspho{display:block}
 .carsmenu .action a{
