@@ -44,9 +44,7 @@ export default function CarsDetail({datas}){
         <>
             <Head>
                 <title>{slug}</title>
-                <link rel="preload" as="image" href={'https:'+photo.fields.file.url}>
-
-</link>
+                
             </Head>
             <div className="details">
                 <div className="title"><h2>{titles}</h2></div>
