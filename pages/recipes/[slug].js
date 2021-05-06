@@ -48,12 +48,12 @@ export default function CarsDetail({datas}){
             <div className="details">
                 <div className="title"><h2>{titles}</h2></div>
                 <div className="paragraph"><p>{documentToReactComponents(description)}</p></div>
-                <div className="detail-pho">{photo.map((item,index)=>(
+                <div className="detail-pho">{photo.map(item=>(
                     <div className="each-pho">
                     {!Image &&<div>Loading</div>}
                     <Image key={item.sys.id} src = {'https:'+item.fields.file.url}
                     width={450} height={300} 
-                    loading={photo.length === index+1 ?'eager':'lazy'}/>
+                    />
                     </div>
                 ))}</div>
                 {media &&
