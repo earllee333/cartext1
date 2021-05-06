@@ -1,4 +1,5 @@
 import {createClient} from 'contentful'
+import Head from 'next/head'
 import CarsMenu from '../../component/CarsMenu'
 
 export async function getStaticProps(){
@@ -19,6 +20,9 @@ const List = ({datas}) => {
     if(!datas) return <div>Loading</div>
     return ( 
         <div className="list-menu">
+            <Head>
+                <title>CarsMenu</title>
+            </Head>
         {datas.map((data,index)=>(
             <CarsMenu key={data.sys.id} datas={datas} data={data} index={index} />
         ))}

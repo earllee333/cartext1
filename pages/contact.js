@@ -1,7 +1,12 @@
+import Head from "next/head";
+
 const Contact = () => {
     return ( 
-        
+    
         <div className="contact">
+            <Head>
+                <title>Contact US!!</title>
+            </Head>
             <ul>
                 <li>Line:123@gmail.com</li>
                 <li>Ig:123@gmail.com</li>

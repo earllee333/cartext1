@@ -1,6 +1,11 @@
+import Head from "next/head";
+
 const About = () => {
     return ( 
         <div className="about">
+            <Head>
+                <title>Story</title>
+            </Head>
             <p>小故事
 
 3 年多前，有一家日本酒店將自己描述為「世界上第一家由機器人組成的酒店」，開業時馬上成為全球頭條新聞，不僅因為採用機器人員工，酒店獨特的環境配置方法也成為話題，但最近傳出這家日本酒店已經解雇數百名機器人員工，因為他們沒有把工作做好，還給人類員工找麻煩。</p>
