@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 
-const CarsMenu = ({data}) => {
+const CarsMenu = ({data,index,datas}) => {
 
     const {number,titles,time,stock,slug,media,photo,profilePicture,tag} = data.fields
     console.log(data)
@@ -15,7 +15,8 @@ const CarsMenu = ({data}) => {
             
             <div className="profile-pho">
               <Image src={'https:'+profilePicture.fields.file.url} 
-              width={450} height={300} />
+              width={450} height={300} 
+              loading={datas.length === index+1 ?'eager':'lazy'}/>
             </div>
             <div className="content">
                 <ul>

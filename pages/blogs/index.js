@@ -19,8 +19,8 @@ const List = ({datas}) => {
     if(!datas) return <div>Loading</div>
     return ( 
         <div className="list-menu">
-        {datas.map(data=>(
-            <CarsMenu key={data.sys.id} data={data} />
+        {datas.map((data,index)=>(
+            <CarsMenu key={data.sys.id} datas={datas} data={data} index={index} />
         ))}
         </div>
      );
