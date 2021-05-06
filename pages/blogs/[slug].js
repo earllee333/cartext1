@@ -6,6 +6,7 @@ import Link from 'next/link'
 import ReactPlayer from 'react-player'
 import {ReactAudio} from 'reactjs-media/audio'
 import Skeleton from '../../component/Skeleton'
+import {useState} from 'react'
 const client =createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
@@ -17,12 +18,13 @@ export const getStaticPaths = async() => {
     })
     const paths = res.items.map(item=>{
         return{
-            params:{slug:item.fields.slug}
+            params:{slug:item.fields.slug},
+            
         }
     })
     return{
         paths:paths,
-        fallback:false
+        fallback:true
     }
 }
 export async function getStaticProps({params}){
@@ -36,6 +38,7 @@ export async function getStaticProps({params}){
     }
 }
 export default function CarsDetail({datas}){
+    if(!datas) return<div>Loading</div>
     const {number,description,photo,tag,titles,time,slug,media} = datas.fields
     return ( 
         <>
@@ -45,11 +48,12 @@ export default function CarsDetail({datas}){
             <div className="details">
                 <div className="title"><h2>{titles}</h2></div>
                 <div className="paragraph"><p>{documentToReactComponents(description)}</p></div>
-                <div className="detail-pho">{photo.map(item=>(
+                <div className="detail-pho">{photo.map((item,index)=>(
                     <div className="each-pho">
+                    {!Image &&<div>Loading</div>}
                     <Image key={item.sys.id} src = {'https:'+item.fields.file.url}
-                    width={450} height={300}
-                     />
+                    width={450} height={300} 
+                    loading={photo.length === index+1 ?'eager':'lazy'}/>
                     </div>
                 ))}</div>
                 {media &&

@@ -1,120 +1,94 @@
-import{createClient} from 'contentful'
+import {createClient} from 'contentful'
 import Image from 'next/image'
+import styles from '../../styles/Home.module.css'
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer'
-import Head from 'next/head'
-import Link from 'next/link'
-import ReactPlayer from 'react-player'
-import {ReactAudio} from 'reactjs-media/audio'
 import Skeleton from '../../component/Skeleton'
-import {useState} from 'react'
-const client =createClient({
+const client = createClient({
     space:'2xmx8hal6xz6',
     accessToken:'di0I-SWjotyOIw-ISEdtrdPL6JUJWUFWdL8BXxIbkYc'
+    
 })
-
-export const getStaticPaths = async() => {
+ 
+export const getStaticPaths = async()=>{
     const res = await client.getEntries({
-        content_type:'blog'
+        content_type:'sample1ForWeb'
     })
+
     const paths = res.items.map(item=>{
-        return{
-            params:{slug:item.fields.slug},
-            
+        return {
+            params:{slug:item.fields.slug}
         }
     })
     return{
         paths:paths,
-        fallback:true
+        fallback:false
     }
 }
+
 export async function getStaticProps({params}){
     const {items} = await client.getEntries({
-        content_type:'blog',
+        content_type:'sample1ForWeb',
         'fields.slug':params.slug
     })
     return{
-        props:{datas:items[0]},
-        revalidate:1
+        props:{recipe:items[0]}
     }
 }
-export default function CarsDetail({datas}){
-    const {number,description,photo,tag,titles,time,slug,media} = datas.fields
-    return ( 
-        <>
-            <Head>
-                <title>{slug}</title>
-            </Head>
-            <div className="details">
-                <div className="title"><h2>{titles}</h2></div>
-                <div className="paragraph"><p>{documentToReactComponents(description)}</p></div>
-                <div className="detail-pho">{photo.map(item=>(
-                    <div className="each-pho">
-                    {!Image &&<div>Loading</div>}
-                    <Image key={item.sys.id} src = {'https:'+item.fields.file.url}
-                    width={450} height={300} 
-                    />
-                    </div>
-                ))}</div>
-                {media &&
-                <div className="video">{media.map(item=>(
-                <ReactPlayer url={'https:'+item.fields.file.url}  width={380} height={300} controls />
 
-                ))}
 
-                </div>}
-                <div className="price">
-                    {number && <p id='TWD'>TWD {number}</p>}
-                    {!number && <Link href ='/contact' >Contact US!!</Link>}
-                </div>
-                
-                <p>{tag.map(tag=>('#'+tag ) )+''}</p>
-                <p>{time}</p>
-            <style jsx>
-                {`{
-                .details{
-                    text-align:center;
-                    
-                }
-                .details .title{
-                    border:1px solid;
-                    border-radius:30px;
-                    margin:10px;
-                }
-                .each-pho{
-                    border-bottom:3px solid;
-                    padding:10px;
-                    margin:30px;
-                    
-                }
-                .video{
-                    margin 0 auto;
-                    width:380px
-                   }
-                
-                   .paragraph p{padding:10px;margin:0px;line-height:1.6;
-                    text-indent: 10px;
-                    letter-spacing:3px;
-                    margin-left: auto;margin-right:auto;
-                    max-width:1024px;
-                    text-align:center;
-                    color:black}
-                .price{
-                
-                padding-top:20px;
-                text-decoration:none;
-                font-weight:500;
-                font-size:20px;
-                color:gray
-                }
-                .time{float:left;}
-                p{color:gray;}
-                #TWD{color:rgb(235, 60, 60)}
-                }`}
-            </style>
+
+
+
+export default function RecipeDetails({recipe}){
+    console.log(recipe);
+    if(!recipe) return <Skeleton />
+    const {featuredImage,title,cookingTime,ingredients,methods}=recipe.fields
+    return(
+        <div>
+            <div className='banner'>
+                <Image src={`http://`+featuredImage.fields.file.url }width={450}height={250}>
+                </Image>
+                <h2>{title}</h2>
             </div>
-        </>
-     );
+            <div className="info">
+                <div className="cookingTime">Take About:{cookingTime}</div>
+                <h3>Ingredients:</h3>
+                {ingredients.map(ing=> (
+                    <span key={ing}>{ing}</span>
+                ))}
+            </div>
+            <div className="method">
+                <h3>Method:</h3>
+                <div>{documentToReactComponents(methods)}</div>
+            </div>
+            <style jsx>
+                {`
+                .banner h2{ margin:0;
+                background:#fff;
+                display:inline-block;
+                padding:20px;
+                position:relative;
+                top:-60px;
+                left:-10px;
+                transform:rotateZ(-2deg);
+                box-shadow:1px 3px 5px rgba(0,0,0,0.1);
+                }
+                .info p {margin:0;}
+                .info span::after{
+                    content:",";
+                }
+                .info span:last-child::after{content:",";
+                }
+                .cookingTime{
+                    display:inline;
+                    color:red;
+                    font-size:20px
+                }
+                `}
+            </style>
+
+        </div>
+     
+    )
 }
-
-
 
