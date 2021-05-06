@@ -18,7 +18,7 @@ const About = () => {
         <style jsx>
             {`{
             .about{padding:10px}
-            p{padding:10px;margin:0px;line-height:1.6;
+            p{padding:10px;margin:0px auto;line-height:1.6;
                 text-indent: 10px;
             letter-spacing:3px
             margin-left: auto;margin-right:auto;
