@@ -37,7 +37,7 @@ const CarsMenu = ({data,index,datas}) => {
             </div>
             {mark&&
             <div className="mark">
-                <Image src='/bmw-ico.jpg' width={36} height={36} ></Image>
+                <Image src={'https:'+mark.fields.file.url} width={36} height={36} ></Image>
             </div>}
 
         <style jsx>
