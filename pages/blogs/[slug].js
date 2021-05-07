@@ -94,12 +94,14 @@ export default function CarsDetail({datas}){
                    }
                 
                    .paragraph p{padding:10px;margin:0px;line-height:1.6;
-                    text-indent: 10px;
-                    letter-spacing:3px;
+                    text-indent: 12px;
+                    letter-spacing:5px;
                     margin-left: auto;margin-right:auto;
                     max-width:1024px;
                     text-align:center;
-                    color:black}
+                    color:black;
+                    font-family: 'Great Vibes', cursive;
+                    font-family: 'Noto Serif TC', serif;}
                 .price{
                 
                 padding-top:20px;
