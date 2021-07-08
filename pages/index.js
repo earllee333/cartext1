@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Footer from '../component/Footer'
+import SliderPho from '../component/SliderPho'
 import styles from '../styles/Home.module.css'
 
 //<meta name="viewport" contentcontent="width=device-width initial-scale=1, user-scalable=1"/>
@@ -13,9 +14,10 @@ export default function Home() {
         <link rel="preload" as="image" href='/blog'>
             </link>
       </Head>
+      <SliderPho />
     <div className='Aim'>
-      <p>如果喜歡一個女生 就和她告白</p>
-      <p>我用這個方法從未失敗過</p>
+      <p>If you like a girl,</p>
+      <p>Go ahead and say 'I like you' </p>
       <p id="chris">Chris Evens</p>
     </div>
     <style jsx>
